@@ -12,4 +12,16 @@ export class ImovelService {
   buscarImoveis(): Observable<any> {
     return this.http.get(`${environment.urlBase}imovel/buscar`);
   }
+
+  salvarImovel(Imovel: any[]): Observable<any> {
+    return this.http.post(`${environment.urlBase}imovel/salvar-imovel`, Imovel);
+  }
+
+  deletarImovel(id: number) {
+    return this.http.delete(`${environment.urlBase}imovel/delete-imovel/${id}`);
+  }
+
+  updateImovel(imovel: any[]): Observable<any> {
+    return this.http.patch(`${environment.urlBase}imovel/update-imovel`, imovel)
+  }
 }
