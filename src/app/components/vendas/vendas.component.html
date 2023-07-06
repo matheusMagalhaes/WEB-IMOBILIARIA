@@ -1,1 +1,8 @@
-<p>vendas works!</p>
+<div class="card-container">
+  <mat-card *ngFor="let imovel of imoveis">
+    <mat-card-content>
+      <span>{{imovel.tipoImovel}}</span>
+      <span>{{imovel.endereco.rua}}</span>
+    </mat-card-content>
+  </mat-card>
+</div>

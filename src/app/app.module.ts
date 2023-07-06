@@ -17,11 +17,17 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { NgxMaskModule, IConfig } from "ngx-mask";
 import { HeaderNavComponent } from "./header-nav/header-nav.component";
-import { VendasComponent } from './components/vendas/vendas.component';
-import { LocacaoComponent } from './components/locacao/locacao.component';
+import { VendasComponent } from "./components/vendas/vendas.component";
+import { LocacaoComponent } from "./components/locacao/locacao.component";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, VendasComponent, LocacaoComponent],
+  declarations: [
+    AppComponent,
+    HeaderNavComponent,
+    VendasComponent,
+    LocacaoComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,6 +45,7 @@ import { LocacaoComponent } from './components/locacao/locacao.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatTooltipModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
