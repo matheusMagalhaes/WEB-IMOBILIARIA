@@ -1,17 +1,16 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CepService {
-
   constructor(private http: HttpClient) {}
 
   consultaCep(cep: string) {
-    cep = cep.replace(/\D/g, '');
+    cep = cep.replace(/\D/g, "");
 
-    if (cep !== '') {
+    if (cep !== "") {
       const cepFormatValidation = /^[0-9]{8}$/;
 
       if (cepFormatValidation.test(cep)) {
@@ -21,4 +20,3 @@ export class CepService {
     return null;
   }
 }
-

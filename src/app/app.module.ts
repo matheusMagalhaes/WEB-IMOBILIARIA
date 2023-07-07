@@ -15,19 +15,14 @@ import { HttpClientModule } from "@angular/common/http";
 import { MatSelectModule } from "@angular/material/select";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatTooltipModule } from "@angular/material/tooltip";
-import { NgxMaskModule, IConfig } from "ngx-mask";
+import { NgxMaskModule } from "ngx-mask";
 import { HeaderNavComponent } from "./header-nav/header-nav.component";
-import { VendasComponent } from "./components/vendas/vendas.component";
-import { LocacaoComponent } from "./components/locacao/locacao.component";
 import { MatCardModule } from "@angular/material/card";
+import { CardImovelComponent } from './components/card-imovel/card-imovel.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderNavComponent,
-    VendasComponent,
-    LocacaoComponent,
-  ],
+  declarations: [AppComponent, HeaderNavComponent, CardImovelComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

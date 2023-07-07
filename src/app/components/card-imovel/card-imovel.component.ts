@@ -2,19 +2,19 @@ import { Component } from "@angular/core";
 import { ImovelService } from "src/app/services/imovel.service";
 
 @Component({
-  selector: "app-vendas",
-  templateUrl: "./vendas.component.html",
-  styleUrls: ["./vendas.component.css"],
+  selector: "app-card-imovel",
+  templateUrl: "./card-imovel.component.html",
+  styleUrls: ["./card-imovel.component.css"],
 })
-export class VendasComponent {
+export class CardImovelComponent {
   constructor(private imovelService: ImovelService) {}
-  imoveis: any[] = [];
 
+  imoveis: any;
   ngOnInit() {
-    this.buscarImoveis();
+    this.buscarTodosImoveis();
   }
 
-  buscarImoveis() {
+  buscarTodosImoveis() {
     this.imovelService.buscarImoveis().subscribe((res) => {
       this.imoveis = res;
     });
