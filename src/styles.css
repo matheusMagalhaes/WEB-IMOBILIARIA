@@ -59,4 +59,18 @@ Legend {
   margin-left: 3rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  padding-right: 84rem;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-icon{
+  color: rgb(232, 179, 80);
+}
+.delete-icon {
+  color: #dc4242;
 }

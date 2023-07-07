@@ -21,9 +21,10 @@ import { MatCardModule } from "@angular/material/card";
 import { CardImovelComponent } from './components/card-imovel/card-imovel.component';
 import { HomeComponent } from './components/home/home.component';
 import { AnunciarImovelComponent } from './components/anunciar-imovel/anunciar-imovel.component';
+import { RealPipe } from "./pipes/real.pipe";
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, CardImovelComponent, HomeComponent, AnunciarImovelComponent],
+  declarations: [AppComponent, HeaderNavComponent, CardImovelComponent, HomeComponent, AnunciarImovelComponent, RealPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

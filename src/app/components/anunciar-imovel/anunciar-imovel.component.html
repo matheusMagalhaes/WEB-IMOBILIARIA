@@ -1,17 +1,9 @@
-<div class="funnel-content">
-  <h1>vamos cadastrar o seu imóvel</h1>
-
-  <section>
-    <h2>Qual o seu tipo de imóvel?</h2>
-    <div class="tipo-imovel-btn">
-      <button class=option-btn>Comercial</button>
-      <button class="option-btn ">Residencial</button>
-    </div>
-  </section>
+<div >
+  <h1>Vamos cadastrar o seu imóvel!</h1>
 
   <form [formGroup]="imovelForm">
     <div class="imovel-form">
-      <mat-form-field appearance="outline" style="margin-top: 1rem" [style.width.rem]="22">
+      <mat-form-field appearance="outline" style="margin-top: 1rem" [style.width.rem]="50">
         <mat-label>Descrição do Imóvel</mat-label>
         <input matInput formControlName="descricao">
       </mat-form-field>
@@ -19,6 +11,11 @@
       <mat-form-field appearance="outline" style="margin-top: 1rem">
         <mat-label>Tipo</mat-label>
         <input matInput formControlName="tipoImovel">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" style="margin-top: 1rem">
+        <mat-label>Valor Aluguel</mat-label>
+        <input matInput type="number" formControlName="valorAluguel" (input)="formatCurrency()" type=number step=0.01>
       </mat-form-field>
 
       <mat-form-field appearance="outline" style="margin-top: 1rem">
@@ -41,7 +38,7 @@
         <input matInput type="number" formControlName="metrosQuadrados">
       </mat-form-field>
 
-      <mat-form-field appearance="outline" style="margin-top: 1rem">
+      <mat-form-field appearance="outline" style="margin-top: 1rem" [style.width.rem]="50">
         <mat-label>Observação</mat-label>
         <input matInput formControlName="observacao">
       </mat-form-field>

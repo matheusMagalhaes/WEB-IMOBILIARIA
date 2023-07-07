@@ -16,6 +16,8 @@ export class AnunciarImovelComponent {
   ) {}
 
   imovelForm!: FormGroup;
+  currencyValue!: any;
+
 
   ngOnInit() {
     this.formValidation();
@@ -25,6 +27,7 @@ export class AnunciarImovelComponent {
     this.imovelForm = this.formBuilder.group({
       descricao: [null, Validators.required],
       tipoImovel: [null, Validators.required],
+      valorAluguel: [null, Validators.required],
       endereco: this.formBuilder.group({
         cep: [null, Validators.required],
         numero: [null, Validators.required],
@@ -63,8 +66,14 @@ export class AnunciarImovelComponent {
   }
 
   salvarImovel() {
-    this.imovelService.salvarImovel(this.imovelForm.value).subscribe(() => {
-      console.log("salvou")
-    });
+    this.imovelService.salvarImovel(this.imovelForm.value).subscribe(() => {});
   }
+  formatCurrency() {
+    // Remove any non-digit characters
+    let numericValue = this.currencyValue.toString().replace(/[^\d.]/g, '');
+
+    // Format the value with currency symbol and commas
+    this.currencyValue = parseFloat(numericValue).toFixed(2);
+  }
+
 }

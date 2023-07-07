@@ -19,4 +19,8 @@ export class CardImovelComponent {
       this.imoveis = res;
     });
   }
+
+  deletar(id: number) {
+    this.imovelService.deletarImovel(id).subscribe(() => {});
+  }
 }
