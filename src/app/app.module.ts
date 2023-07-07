@@ -20,9 +20,10 @@ import { HeaderNavComponent } from "./header-nav/header-nav.component";
 import { MatCardModule } from "@angular/material/card";
 import { CardImovelComponent } from './components/card-imovel/card-imovel.component';
 import { HomeComponent } from './components/home/home.component';
+import { AnunciarImovelComponent } from './components/anunciar-imovel/anunciar-imovel.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, CardImovelComponent, HomeComponent],
+  declarations: [AppComponent, HeaderNavComponent, CardImovelComponent, HomeComponent, AnunciarImovelComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

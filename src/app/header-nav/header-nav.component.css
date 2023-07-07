@@ -21,3 +21,8 @@
   background-color: #04AA6D;
   color: white;
 }
+
+.anouncement {
+  display: flex;
+  justify-content: flex-end;
+}

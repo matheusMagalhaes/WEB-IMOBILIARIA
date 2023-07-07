@@ -1,0 +1,58 @@
+h1 {
+
+  margin: 1rem;
+
+}
+
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #444;
+  line-height: 28px;
+}
+
+.funnel-content {
+  display: grid;
+  grid-column-gap: 16px;
+  grid-row-gap: 0;
+  justify-items: center;
+}
+
+.tipo-imovel-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-btn {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  background-color: hsla(0, 0%, 100%, .001);
+  border: 1px solid #04AA6D;
+  color: #04AA6D;
+  border-radius: 4px;
+  height: 48px;
+}
+
+.tipo-imovel-btn button.pressed {
+  background-color: #04AA6D;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.imovel-form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
