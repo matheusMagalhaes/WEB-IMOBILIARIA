@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { ImovelService } from "src/app/services/imovel.service";
 
 @Component({
@@ -10,6 +10,7 @@ export class CardImovelComponent {
   constructor(private imovelService: ImovelService) {}
 
   imoveis: any;
+  @Output() imovelSelcionado = new EventEmitter<any>();
   ngOnInit() {
     this.buscarTodosImoveis();
   }
@@ -23,4 +24,6 @@ export class CardImovelComponent {
   deletar(id: number) {
     this.imovelService.deletarImovel(id).subscribe(() => {});
   }
+
+  editar(imovel: any) {}
 }
