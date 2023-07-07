@@ -18,7 +18,7 @@
 
       <mat-form-field appearance="outline" style="margin-top: 1rem">
         <mat-label>Tipo</mat-label>
-        <input matInput formControlName="tipo">
+        <input matInput formControlName="tipoImovel">
       </mat-form-field>
 
       <mat-form-field appearance="outline" style="margin-top: 1rem">
@@ -87,7 +87,7 @@
 
 </div>
 <span class="save-btn-position">
-  <button class="save-btn" matTooltip="Salvar" [disabled]="imovelForm.invalid">
+  <button (click)="salvarImovel()" class="save-btn" matTooltip="Salvar" [disabled]="imovelForm.invalid">
     <mat-icon>save</mat-icon>
   </button>
 </span>

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { CepService } from "src/app/services/cep.service";
+import { ImovelService } from "src/app/services/imovel.service";
 
 @Component({
   selector: "app-anunciar-imovel",
@@ -8,8 +9,11 @@ import { CepService } from "src/app/services/cep.service";
   styleUrls: ["./anunciar-imovel.component.css"],
 })
 export class AnunciarImovelComponent {
-  constructor(private formBuilder: FormBuilder,
-    private  cepService: CepService) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private cepService: CepService,
+    private imovelService: ImovelService
+  ) {}
 
   imovelForm!: FormGroup;
 
@@ -20,7 +24,7 @@ export class AnunciarImovelComponent {
   formValidation() {
     this.imovelForm = this.formBuilder.group({
       descricao: [null, Validators.required],
-      tipo: [null, Validators.required],
+      tipoImovel: [null, Validators.required],
       endereco: this.formBuilder.group({
         cep: [null, Validators.required],
         numero: [null, Validators.required],
@@ -55,6 +59,12 @@ export class AnunciarImovelComponent {
         cidade: data.localidade,
         uf: data.uf,
       },
+    });
+  }
+
+  salvarImovel() {
+    this.imovelService.salvarImovel(this.imovelForm.value).subscribe(() => {
+      console.log("salvou")
     });
   }
 }
