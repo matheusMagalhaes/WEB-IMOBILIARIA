@@ -7,7 +7,7 @@ import { AnunciarImovelComponent } from "./components/anunciar-imovel/anunciar-i
 const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "locacao", component: CardImovelComponent },
-  { path: "anuncio", component: AnunciarImovelComponent },
+  // { path: "anuncio", component: AnunciarImovelComponent },
 ];
 
 @NgModule({
