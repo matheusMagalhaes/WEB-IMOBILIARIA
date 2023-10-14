@@ -9,9 +9,4 @@ import { MatMenuTrigger } from "@angular/material/menu";
 export class HeaderNavComponent {
   login?: Boolean;
   @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
-  menu: any;
-
-  newLogin() {
-    this.login = true;
-  }
 }
