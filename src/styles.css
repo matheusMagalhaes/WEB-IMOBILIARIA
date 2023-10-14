@@ -1,12 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
-html, body {
-  height: 100%;
+:root {
+  --color-primary: #5ce46d;
+  --font-primary: black;
+  --bg-primary: #f3f3f3;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1em;
+
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+main {
+  background: var(--bg-primary);
 }
 
 .card-container {
@@ -68,9 +77,10 @@ Legend {
   cursor: pointer;
 }
 
-.edit-icon{
+.edit-icon {
   color: rgb(232, 179, 80);
 }
+
 .delete-icon {
   color: #dc4242;
 }

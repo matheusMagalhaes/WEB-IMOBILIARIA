@@ -22,7 +22,7 @@
 }
 
 .topnav a.router-link-active {
-  box-shadow: inset 0 -3px 0 0 #5ce46d, 0 1px 0 0 #5ce46d;
+  box-shadow: inset 0 -3px 0 0 var(--color-primary), 0 1px 0 0 var(--color-primary);
   pointer-events: none;
 }
 
@@ -54,9 +54,9 @@ mat-icon {
   width: 11rem;
   height: 2rem;
   background: none;
-  border: 1px solid #5ce46d;
+  border: 1px solid var(--color-primary);
   border-radius: 15px;
-  color: #5ce46d;
+  color: var(--color-primary);
   cursor: pointer;
 
 }
@@ -65,9 +65,9 @@ mat-icon {
   width: 11rem;
   height: 2rem;
   background: f3f3f3;
-  border: 1px solid #5ce46d;
+  border: 1px solid var(--color-primary);
   border-radius: 15px;
-  color: #5ce46d;
+  color: var(--color-primary);
   cursor: pointer;
   margin-top: 0.5rem;
 }
