@@ -18,13 +18,21 @@ import { MatTooltipModule } from "@angular/material/tooltip";
 import { NgxMaskModule } from "ngx-mask";
 import { HeaderNavComponent } from "./header-nav/header-nav.component";
 import { MatCardModule } from "@angular/material/card";
-import { CardImovelComponent } from './components/card-imovel/card-imovel.component';
-import { HomeComponent } from './components/home/home.component';
-import { AnunciarImovelComponent } from './components/anunciar-imovel/anunciar-imovel.component';
+import { CardImovelComponent } from "./components/card-imovel/card-imovel.component";
+import { HomeComponent } from "./components/home/home.component";
 import { RealPipe } from "./pipes/real.pipe";
+import { LoginPageComponent } from "./components/login-page/login-page.component";
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, CardImovelComponent, HomeComponent, AnunciarImovelComponent, RealPipe],
+  declarations: [
+    AppComponent,
+    HeaderNavComponent,
+    CardImovelComponent,
+    HomeComponent,
+    RealPipe,
+    LoginPageComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -43,6 +51,8 @@ import { RealPipe } from "./pipes/real.pipe";
     ReactiveFormsModule,
     MatTooltipModule,
     MatCardModule,
+    MatMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],

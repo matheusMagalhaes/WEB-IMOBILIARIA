@@ -3,7 +3,15 @@
     <a [routerLink]="['/home']" routerLinkActive="router-link-active">Inicio</a>
     <a [routerLink]="['/locacao']" routerLinkActive="router-link-active">Alugar</a>
     <div class="button-container">
-      <button class="login-button">Log in</button>
+      <button class="login-button" (click)="trigger.openMenu"
+        [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <div class="menu-container">
+          <h2>Welcome back!</h2>
+          <button class="login-menu-button">Log in</button>
+          <button class="signin-menu-button">Sign in</button>
+        </div>
+      </mat-menu>
     </div>
   </nav>
 </div>
