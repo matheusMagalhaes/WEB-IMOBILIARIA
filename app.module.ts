@@ -15,11 +15,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { NgxMaskModule } from 'ngx-mask';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
+import { MatCardModule } from '@angular/material/card';
+import { HomeComponent } from './components/home/home.component';
+import { RealPipe } from './pipes/real.pipe';
+import { MatMenuModule } from '@angular/material/menu';
+import { SearchFormComponent } from './components/forms/search-form/search-form.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent],
+  declarations: [
+    AppComponent,
+    HeaderNavComponent,
+    HomeComponent,
+    RealPipe,
+    SearchFormComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,6 +48,8 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatTooltipModule,
+    MatCardModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
