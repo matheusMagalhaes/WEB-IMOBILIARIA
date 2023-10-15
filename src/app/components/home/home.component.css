@@ -1,0 +1,9 @@
+.img-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img {
+  border-bottom-left-radius: 165px;
+  width: 60%;
+}

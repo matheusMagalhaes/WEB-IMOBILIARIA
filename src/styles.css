@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+:root {
+  --color-primary: #5ce46d;
+  --font-primary: black;
+  --bg-primary: #f3f3f3;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1em;
+
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  background: var(--bg-primary);
+}
+
+.card-container {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mdc-card {
+  width: 50rem;
+}
+
+.save-btn-position {
+  display: flex;
+  justify-content: right;
+  margin-right: 20px;
+}
+
+.save-btn {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #22b880;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  display: flex;
+  -webkit-transition: all 0.5s;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+}
+
+.save-btn:disabled {
+  background-color: grey;
+}
+
+.endereco-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly
+}
+
+Legend {
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  padding-right: 84rem;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-icon {
+  color: rgb(232, 179, 80);
+}
+
+.delete-icon {
+  color: #dc4242;
+}
