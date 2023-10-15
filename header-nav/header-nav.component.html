@@ -1,1 +1,15 @@
-<p>header-nav works!</p>
+<nav class="topnav">
+  <a [routerLink]="['/home']" routerLinkActive="router-link-active">Inicio</a>
+  <div class="button-container">
+    <button class="login-button" (click)="trigger.openMenu"
+      [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <div class="menu-container">
+        <h2>Welcome back!</h2>
+        <button [routerLink]="['/login']" routerLinkActive="router-link-active" class="login-menu-button">Log
+          in</button>
+        <button class="signin-menu-button">Sign up</button>
+      </div>
+    </mat-menu>
+  </div>
+</nav>
