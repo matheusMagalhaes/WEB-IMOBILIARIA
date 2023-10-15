@@ -21,8 +21,7 @@ import { MatCardModule } from "@angular/material/card";
 import { CardImovelComponent } from "./components/card-imovel/card-imovel.component";
 import { HomeComponent } from "./components/home/home.component";
 import { RealPipe } from "./pipes/real.pipe";
-import { LoginPageComponent } from "./components/login-page/login-page.component";
-import { MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { MatMenuModule} from '@angular/material/menu';
     CardImovelComponent,
     HomeComponent,
     RealPipe,
-    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,8 +49,7 @@ import { MatMenuModule} from '@angular/material/menu';
     ReactiveFormsModule,
     MatTooltipModule,
     MatCardModule,
-    MatMenuModule
-
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
