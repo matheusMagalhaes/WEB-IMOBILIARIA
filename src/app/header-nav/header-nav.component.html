@@ -1,9 +1,8 @@
 <div>
   <nav class="topnav">
     <a [routerLink]="['/home']" routerLinkActive="router-link-active">Inicio</a>
-    <a [routerLink]="['/locacao']" routerLinkActive="router-link-active">Alugar</a>
     <div class="button-container">
-      <button class="login-button" (click)="trigger.openMenu"
+      <button class="user-button" (click)="trigger.openMenu"
         [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
       <mat-menu #menu="matMenu">
         <div class="menu-container">
