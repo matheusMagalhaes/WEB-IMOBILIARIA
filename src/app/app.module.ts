@@ -21,9 +21,10 @@ import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './components/home/home.component';
 import { RealPipe } from './pipes/real.pipe';
 import { MatMenuModule } from '@angular/material/menu';
+import { SearchFormComponent } from './components/Forms/search-form/search-form.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe],
+  declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe, SearchFormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
