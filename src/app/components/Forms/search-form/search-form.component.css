@@ -1,0 +1,28 @@
+.img-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img {
+  width: 100vw;
+}
+
+.search {
+  display: flex;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  transform: translate(50px, -220px);
+  position: absolute;
+  top: 80%;
+  background: var(--bg-primary);
+  box-shadow: 3px 3px 16px 3px #272424;
+}
+
+mat-label {
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 1rem;
+}

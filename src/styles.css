@@ -4,8 +4,9 @@
 :root {
   --color-primary: #5ce46d;
   --font-primary: black;
-  --bg-primary: #f3f3f3;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f3f3;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 1em;
 
 }
