@@ -1,6 +1,6 @@
-.img-container {
+.search {
   display: flex;
-  justify-content: flex-end;
+  position: relative;
 }
 
 img {
@@ -15,14 +15,14 @@ img {
   position: absolute;
   top: 80%;
   background: var(--bg-primary);
-  box-shadow: 3px 3px 16px 3px #272424;
+  box-shadow: 9px 10px 24px 8px #272424;
   border-radius: 10px;
   z-index: 100;
 
 }
 
 mat-label {
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1rem;
   font-size: 1rem;
   margin: 0 0 0.25rem;
@@ -30,8 +30,25 @@ mat-label {
   flex-direction: row;
 }
 
-.form-container {
-  margin: 10px 10px 10px 10px;
+.form-direction {
   display: flex;
   flex-direction: row;
+}
+
+.form-container {
+  margin: 10px 10px 10px 10px;
+
+}
+
+
+.form-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  position: relative;
+}
+
+
+.form-tabs>* {
+  cursor: pointer;
 }

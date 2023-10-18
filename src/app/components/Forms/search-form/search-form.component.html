@@ -2,24 +2,27 @@
   <img src="assets\imgs\brooke-cagle-WHWYBmtn3_0-unsplash.jpg" width="600" alt="">
 
   <form class="search-form">
-    <div class="form-container">
-      <mat-label>Onde deseja morar?</mat-label>
-      <mat-form-field appearance="outline" [style.width.vw]="30">
-        <input matInput placeholder="Digite o nome da rua, bairro ou cidade">
-      </mat-form-field>
 
-      <mat-label>Tipo de imóvel</mat-label>
-      <mat-form-field appearance="outline">
-        <mat-select>
-          <mat-option>test</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <div class="form-tabs">
+      <span>Comprar</span>
+      <span>Alugar</span>
+    </div>
 
-      <mat-form-field appearance="outline">
-        <mat-select>
-          <mat-option>test</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <div class="form-direction">
+      <div class="form-container">
+        <mat-label>Onde deseja morar?</mat-label>
+        <mat-form-field appearance="outline" [style.width.vw]="30">
+          <input matInput placeholder="Digite o nome da rua, bairro ou cidade">
+        </mat-form-field>
+      </div>
+      <div class="form-container">
+        <mat-label>Tipo de imóvel</mat-label>
+        <mat-form-field appearance="outline">
+          <mat-select>
+            <mat-option>test</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
     </div>
   </form>
 </div>
