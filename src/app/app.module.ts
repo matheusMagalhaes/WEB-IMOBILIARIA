@@ -44,6 +44,7 @@ import { SearchFormComponent } from './components/Forms/search-form/search-form.
     MatTooltipModule,
     MatCardModule,
     MatMenuModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

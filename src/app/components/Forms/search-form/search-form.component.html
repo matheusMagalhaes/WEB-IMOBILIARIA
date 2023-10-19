@@ -1,7 +1,7 @@
 <div class="search">
   <img src="assets\imgs\brooke-cagle-WHWYBmtn3_0-unsplash.jpg" width="600" alt="">
 
-  <form class="search-form">
+  <form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()" id="searchForm">
 
     <div class="form-tabs">
       <span>Comprar</span>
@@ -12,17 +12,22 @@
       <div class="form-container">
         <mat-label>Onde deseja morar?</mat-label>
         <mat-form-field appearance="outline" [style.width.vw]="30">
-          <input matInput placeholder="Digite o nome da rua, bairro ou cidade">
+          <input matInput placeholder="Digite o nome da rua, bairro ou cidade" formControlName="lougradouro">
         </mat-form-field>
       </div>
+
       <div class="form-container">
         <mat-label>Tipo de imóvel</mat-label>
         <mat-form-field appearance="outline">
-          <mat-select>
+          <mat-select formControlName="tipo">
             <mat-option>test</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
+      <span class="search-button-container"><button type="submit" form="searchForm"
+          class="search-button">Buscar</button></span>
+
     </div>
+
   </form>
 </div>

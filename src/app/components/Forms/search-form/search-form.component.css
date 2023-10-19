@@ -52,3 +52,22 @@ mat-label {
 .form-tabs>* {
   cursor: pointer;
 }
+
+.search-button-container {
+  display: flex;
+  margin: 5px 10px 7px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.search-button {
+  color: var(--bg-secondary);
+  background: var(--color-primary);
+  border: none;
+  width: 8vw;
+  border-radius: 10px;
+  height: 56px;
+  font-weight: bold;
+  cursor: pointer;
+}
