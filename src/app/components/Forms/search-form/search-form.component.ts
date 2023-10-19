@@ -1,10 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
-  styleUrls: ['./search-form.component.css']
+  styleUrls: ['./search-form.component.css'],
 })
-export class SearchFormComponent {
+export class SearchFormComponent implements OnInit {
+  constructor(private fb: FormBuilder) {}
 
+  ngOnInit() {
+    this.formHandling();
+  }
+
+  searchForm!: FormGroup;
+
+  onSubmit() {
+    this.formHandling();
+    console.warn(this.searchForm.value);
+  }
+
+  formHandling() {
+    this.searchForm = this.fb.group({
+      lougradouro: [''],
+      tipo: [''],
+    });
+  }
 }
