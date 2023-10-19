@@ -46,6 +46,8 @@ mat-label {
   justify-content: center;
   gap: 48px;
   position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 
@@ -70,4 +72,17 @@ mat-label {
   height: 56px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.search-button:hover {
+  background: rgb(107, 212, 140);
+  box-shadow: 1px 1px 6px 1px #272424;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 10px 25px 20px;
+  color: #3c4453;
+  font-family: ZonaPro, Arial, Helvetica, sans-serif;
 }
