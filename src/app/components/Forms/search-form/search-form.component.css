@@ -18,7 +18,8 @@ img {
   box-shadow: 9px 10px 24px 8px #272424;
   border-radius: 10px;
   z-index: 100;
-
+  padding: 24px 21px;
+  top: 75%;
 }
 
 mat-label {
@@ -46,6 +47,8 @@ mat-label {
   justify-content: center;
   gap: 48px;
   position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 
@@ -70,4 +73,39 @@ mat-label {
   height: 56px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.search-button:hover {
+  background: rgb(107, 212, 140);
+  box-shadow: 1px 1px 6px 1px #272424;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 10px 25px 20px;
+  color: #3c4453;
+  font-family: ZonaPro, Arial, Helvetica, sans-serif;
+}
+
+.tab-selected {
+  position: absolute;
+  bottom: -8px;
+  left: 348px;
+  height: 4px;
+  width: 66px;
+  background-color: var(--color-primary);
+  transition: left 200ms ease-in-out;
+
+}
+
+.tab-select--right {
+  height: 4px;
+  width: 66px;
+  left: calc(66% - 114px);
+}
+
+.form-divisor {
+  border: 1px solid;
+  width: 97%;
 }

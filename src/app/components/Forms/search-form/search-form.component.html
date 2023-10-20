@@ -2,11 +2,16 @@
   <img src="assets\imgs\brooke-cagle-WHWYBmtn3_0-unsplash.jpg" width="600" alt="">
 
   <form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()" id="searchForm">
+    <h1>O seu novo lar você encontra aqui!</h1>
 
     <div class="form-tabs">
-      <span>Comprar</span>
-      <span>Alugar</span>
+      <span (click)="OnSet()">Comprar</span>
+      <span (click)="OnSet()">Alugar</span>
+      <span class="tab-selected" [ngClass]="{'tab-select--right' :  sale}"></span>
     </div>
+    <hr class="form-divisor">
+
+
 
     <div class="form-direction">
       <div class="form-container">
