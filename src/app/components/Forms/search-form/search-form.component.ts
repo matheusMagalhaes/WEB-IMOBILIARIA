@@ -14,6 +14,7 @@ export class SearchFormComponent implements OnInit {
   }
 
   searchForm!: FormGroup;
+  sale!: Boolean;
 
   onSubmit() {
     this.formHandling();
@@ -25,5 +26,9 @@ export class SearchFormComponent implements OnInit {
       lougradouro: [''],
       tipo: [''],
     });
+  }
+
+  OnSet() {
+    this.sale ? (this.sale = false) : (this.sale = true);
   }
 }

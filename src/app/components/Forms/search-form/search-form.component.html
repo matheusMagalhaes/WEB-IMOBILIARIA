@@ -5,9 +5,13 @@
     <h1>O seu novo lar você encontra aqui!</h1>
 
     <div class="form-tabs">
-      <span>Comprar</span>
-      <span>Alugar</span>
+      <span (click)="OnSet()">Comprar</span>
+      <span (click)="OnSet()">Alugar</span>
+      <span class="tab-selected" [ngClass]="{'tab-select--right' :  sale}"></span>
     </div>
+    <hr class="form-divisor">
+
+
 
     <div class="form-direction">
       <div class="form-container">
