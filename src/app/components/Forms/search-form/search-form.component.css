@@ -34,6 +34,7 @@ mat-label {
 .form-direction {
   display: flex;
   flex-direction: row;
+  margin-top: 2vw;
 }
 
 .form-container {
@@ -44,11 +45,10 @@ mat-label {
 
 .form-tabs {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 48px;
   position: relative;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px -5px -7px 15px;
 }
 
 
@@ -90,8 +90,8 @@ h1 {
 
 .tab-selected {
   position: absolute;
-  bottom: -8px;
-  left: 348px;
+  bottom: -4px;
+  left: -3px;
   height: 4px;
   width: 66px;
   background-color: var(--color-primary);
@@ -102,10 +102,10 @@ h1 {
 .tab-select--right {
   height: 4px;
   width: 66px;
-  left: calc(66% - 114px);
+  left: calc(66% - 456px);
 }
 
 .form-divisor {
-  border: 1px solid;
+  border: 1px solid #ece4e4;
   width: 97%;
 }
