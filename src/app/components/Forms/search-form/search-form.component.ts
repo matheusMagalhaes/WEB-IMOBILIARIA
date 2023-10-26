@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ImovelService } from 'src/app/services/imovel.service';
 
 @Component({
   selector: 'app-search-form',
@@ -7,14 +8,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./search-form.component.css'],
 })
 export class SearchFormComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private imovelSevice: ImovelService) {}
 
   ngOnInit() {
     this.formHandling();
+    this.buscarTipos()
   }
 
   searchForm!: FormGroup;
   sale!: Boolean;
+  tipos: any
 
   onSubmit() {
     this.formHandling();
@@ -30,5 +33,11 @@ export class SearchFormComponent implements OnInit {
 
   OnSet() {
     this.sale ? (this.sale = false) : (this.sale = true);
+  }
+
+  buscarTipos() {
+    this.imovelSevice.buscarTipos().subscribe((res): any => {
+      this.tipos = res;
+    });
   }
 }

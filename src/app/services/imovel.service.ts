@@ -9,19 +9,9 @@ import { Observable } from "rxjs";
 export class ImovelService {
   constructor(private http: HttpClient) {}
 
-  buscarImoveis(): Observable<any> {
-    return this.http.get(`${environment.urlBase}imovel/buscar`);
+  buscarTipos(): Observable<any> {
+    return this.http.get(`${environment.urlBase}tipo`);
   }
 
-  salvarImovel(Imovel: any[]): Observable<any> {
-    return this.http.post(`${environment.urlBase}imovel/salvar-imovel`, Imovel);
-  }
 
-  deletarImovel(id: number) {
-    return this.http.delete(`${environment.urlBase}imovel/delete-imovel/${id}`);
-  }
-
-  updateImovel(imovel: any[]): Observable<any> {
-    return this.http.patch(`${environment.urlBase}imovel/update-imovel`, imovel)
-  }
 }
