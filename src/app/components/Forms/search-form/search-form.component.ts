@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ImovelService } from 'src/app/services/imovel.service';
+import { tipoGroups } from '../../models/tipoGroups';
+import { Tipos } from '../../models/tipos';
 
 @Component({
   selector: 'app-search-form',
@@ -12,19 +14,28 @@ export class SearchFormComponent implements OnInit {
 
   ngOnInit() {
     this.formHandling();
-    this.buscarTipos()
+    this.buscarTipos();
   }
 
   searchForm!: FormGroup;
+  control = new FormControl('');
   sale!: Boolean;
-  tipos: any
-
+  tipos: any;
+  tipoImv: any;
+  grupos: any;
   onSubmit() {
     this.formHandling();
     console.warn(this.searchForm.value);
   }
 
   formHandling() {
+    this.grupos = [
+      {
+        name: 'Residencial',
+        tipo: [this.tipos],
+      },
+    ];
+
     this.searchForm = this.fb.group({
       lougradouro: [''],
       tipo: [''],
@@ -40,4 +51,6 @@ export class SearchFormComponent implements OnInit {
       this.tipos = res;
     });
   }
+
+  toggleAllSelection() {}
 }
