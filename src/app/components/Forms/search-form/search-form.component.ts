@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ImovelService } from 'src/app/services/imovel.service';
-import { tipoGroups } from '../../models/tipoGroups';
-import { Tipos } from '../../models/tipos';
+
 
 @Component({
   selector: 'app-search-form',
