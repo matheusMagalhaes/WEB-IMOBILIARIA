@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ImovelService } from 'src/app/services/imovel.service';
 
-
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
@@ -19,9 +18,11 @@ export class SearchFormComponent implements OnInit {
   searchForm!: FormGroup;
   control = new FormControl('');
   sale!: Boolean;
-  tipos: any;
+  tipos!: any[];
   tipoImv: any;
   grupos: any;
+  selectAll!: Boolean
+
   onSubmit() {
     this.formHandling();
     console.warn(this.searchForm.value);
@@ -51,5 +52,10 @@ export class SearchFormComponent implements OnInit {
     });
   }
 
-  toggleAllSelection() {}
+  toggleAllSelection() {
+    debugger
+    if (this.selectAll) {
+      this.tipos.forEach((e) => (e.selected = false));
+    } else this.tipos.forEach((e) => (e.selected = true));
+  }
 }
