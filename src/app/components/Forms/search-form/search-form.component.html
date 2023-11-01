@@ -24,10 +24,10 @@
       <div class="form-container">
         <mat-label>Tipo de imóvel</mat-label>
         <mat-form-field appearance="outline">
-          <mat-select formControlName="tipo" #select multiple>
+          <mat-select  [formControl]="tipoControl" #select multiple>
             <mat-checkbox id="checked" (change)="toggleAllSelection($event)">Selectionar
               todos </mat-checkbox>
-            <mat-option *ngFor="let tipo of tipos" [value]="tipoImv"> {{tipo.tipo}}
+            <mat-option *ngFor="let tipo of tipos" [value]="tipo"> {{tipo.tipo}}
             </mat-option>
           </mat-select>
         </mat-form-field>

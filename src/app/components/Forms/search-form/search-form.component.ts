@@ -12,36 +12,22 @@ import { ImovelService } from 'src/app/services/imovel.service';
 export class SearchFormComponent implements OnInit {
   constructor(private fb: FormBuilder, private imovelSevice: ImovelService) {}
   @ViewChild('select') select!: MatSelect;
+  tipoControl = new FormControl('');
 
   ngOnInit() {
-    this.formHandling();
+    this.searchForm = this.fb.group({
+      lougradouro: '',
+      tipo: this.tipoControl
+    });
     this.buscarTipos();
   }
 
   searchForm!: FormGroup;
-  control = new FormControl('');
-  sale!: Boolean;
+  sale!: boolean;
   tipos!: any[];
-  tipoImv: any;
-  grupos: any;
 
   onSubmit() {
-    this.formHandling();
-    console.warn(this.searchForm.value);
-  }
-
-  formHandling() {
-    this.grupos = [
-      {
-        name: 'Residencial',
-        tipo: [this.tipos],
-      },
-    ];
-
-    this.searchForm = this.fb.group({
-      lougradouro: [''],
-      tipo: [''],
-    });
+    console.log(this.searchForm.value);
   }
 
   OnSet() {
