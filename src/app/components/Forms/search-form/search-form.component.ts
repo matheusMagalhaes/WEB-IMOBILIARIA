@@ -24,6 +24,7 @@ export class SearchFormComponent implements OnInit {
   tipos!: any[];
   tipoImv: any;
   grupos: any;
+
   onSubmit() {
     this.formHandling();
     console.warn(this.searchForm.value);
@@ -53,10 +54,10 @@ export class SearchFormComponent implements OnInit {
     });
   }
 
-  toggleAllSelection() {
-    let checked = document.getElementById('checked');
+  toggleAllSelection(event: any) {
+    // let checked = document.getElementById('checked');
 
-    if (checked?.ariaChecked) {
+    if (event.checked) {
       this.select.options.forEach((item: MatOption) => item.select());
     } else {
       this.select.options.forEach((item: MatOption) => item.deselect());
