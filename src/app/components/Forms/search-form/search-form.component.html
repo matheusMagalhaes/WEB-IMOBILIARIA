@@ -24,10 +24,11 @@
       <div class="form-container">
         <mat-label>Tipo de imóvel</mat-label>
         <mat-form-field appearance="outline">
-          <mat-select formControlName="tipo" multiple ngDefaultControl>
-            <input type="checkbox" [(ngModel)]="selectAll" (onSelectionChange)="toggleAllSelection()">Selectionar todos
+          <mat-select formControlName="tipo" #select multiple>
+            <mat-option id="checked" aria-checked="true" (onSelectionChange)="toggleAllSelection()">Selectionar
+              todos </mat-option>
             <mat-optgroup *ngFor="let grupo of grupos">
-              <mat-option *ngFor="let tipo of tipos" [value]="tipoImv" > {{tipo.tipo}}
+              <mat-option *ngFor="let tipo of tipos" [value]="tipoImv"> {{tipo.tipo}}
               </mat-option>
             </mat-optgroup>
           </mat-select>
