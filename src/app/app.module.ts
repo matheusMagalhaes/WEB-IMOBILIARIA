@@ -22,6 +22,8 @@ import { HomeComponent } from './components/home/home.component';
 import { RealPipe } from './pipes/real.pipe';
 import { MatMenuModule } from '@angular/material/menu';
 import { SearchFormComponent } from './components/Forms/search-form/search-form.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe, SearchFormComponent],
@@ -44,7 +46,9 @@ import { SearchFormComponent } from './components/Forms/search-form/search-form.
     MatTooltipModule,
     MatCardModule,
     MatMenuModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

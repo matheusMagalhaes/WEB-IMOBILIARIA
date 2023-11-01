@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { MatOption } from '@angular/material/core';
+import { MatSelect } from '@angular/material/select';
 import { ImovelService } from 'src/app/services/imovel.service';
 
 @Component({
@@ -9,6 +11,7 @@ import { ImovelService } from 'src/app/services/imovel.service';
 })
 export class SearchFormComponent implements OnInit {
   constructor(private fb: FormBuilder, private imovelSevice: ImovelService) {}
+  @ViewChild('select') select!: MatSelect;
 
   ngOnInit() {
     this.formHandling();
@@ -21,8 +24,6 @@ export class SearchFormComponent implements OnInit {
   tipos!: any[];
   tipoImv: any;
   grupos: any;
-  selectAll!: Boolean
-
   onSubmit() {
     this.formHandling();
     console.warn(this.searchForm.value);
@@ -53,9 +54,12 @@ export class SearchFormComponent implements OnInit {
   }
 
   toggleAllSelection() {
-    debugger
-    if (this.selectAll) {
-      this.tipos.forEach((e) => (e.selected = false));
-    } else this.tipos.forEach((e) => (e.selected = true));
+    let checked = document.getElementById('checked');
+
+    if (checked?.ariaChecked) {
+      this.select.options.forEach((item: MatOption) => item.select());
+    } else {
+      this.select.options.forEach((item: MatOption) => item.deselect());
+    }
   }
 }
