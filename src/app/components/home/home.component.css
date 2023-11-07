@@ -1,0 +1,31 @@
+.category_title {
+  text-align: center;
+  color: var(--font-primary);
+  font-weight: 500;
+  margin: 50px 10px 10px 10px;
+}
+
+img {
+  border-radius: 8px;
+  height: 178px;
+  object-fit: cover;
+  margin: 10px 10px 10px 20px;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 10px 10px 10px;
+}
+
+.category h2 {
+  font-weight: 500;
+  color: var(--font-primary);
+  text-align: left;
+}
+
+.secondary_categories {
+  display: flex;
+  flex-direction: row;
+}
