@@ -84,8 +84,8 @@ h1 {
   display: flex;
   justify-content: flex-start;
   margin: 20px 10px 25px 20px;
-  color: #3c4453;
-  font-family: ZonaPro, Arial, Helvetica, sans-serif;
+  color: var(-  -font-primary);
+  font-weight: 500;
 }
 
 .tab-selected {
