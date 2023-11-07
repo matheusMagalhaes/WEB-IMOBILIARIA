@@ -5,27 +5,29 @@
   margin: 50px 10px 10px 10px;
 }
 
-img {
+.category img {
   border-radius: 8px;
   height: 178px;
   object-fit: cover;
   margin: 10px 10px 10px 20px;
 }
 
-.category {
+.categories {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 50px 10px 10px 10px;
+  align-items: baseline;
 }
 
-.category h2 {
+.categories h2 {
   font-weight: 500;
   color: var(--font-primary);
   text-align: left;
 }
 
-.secondary_categories {
+.category {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  max-width: 293px;
 }
