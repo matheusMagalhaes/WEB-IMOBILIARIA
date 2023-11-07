@@ -9,7 +9,6 @@
   border-radius: 8px;
   height: 178px;
   object-fit: cover;
-  margin: 10px 10px 10px 20px;
 }
 
 .categories {
@@ -24,10 +23,17 @@
   font-weight: 500;
   color: var(--font-primary);
   text-align: left;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .category {
   display: flex;
   flex-direction: column;
   max-width: 293px;
+  margin: 10px
+}
+
+.category p {
+  margin-top: -10px;
 }
