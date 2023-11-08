@@ -16,17 +16,18 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgxMaskModule } from 'ngx-mask';
-import { HeaderNavComponent } from './header-nav/header-nav.component';
+import { HeaderNavComponent } from './components/header-nav/header-nav.component';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './components/home/home.component';
 import { RealPipe } from './pipes/real.pipe';
 import { MatMenuModule } from '@angular/material/menu';
 import { SearchFormComponent } from './components/Forms/search-form/search-form.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe, SearchFormComponent],
+  declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe, SearchFormComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
