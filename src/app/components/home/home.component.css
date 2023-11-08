@@ -37,3 +37,18 @@
 .category p {
   margin-top: -10px;
 }
+
+.divider {
+  width: 4rem;
+  background: var(--color-primary);
+  height: 3.5px;
+  border-radius: 2px;
+
+}
+
+.divider_container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
