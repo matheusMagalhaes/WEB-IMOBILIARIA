@@ -1,0 +1,21 @@
+.footer_header {
+  color: #fff;
+  position: relative;
+  font-weight: 700;
+}
+
+.footer_header::after {
+  background: #fff;
+  content: "teste";
+}
+
+.footer_content_section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer_content_container {
+  margin: 0 auto;
+  max-width: 1232px;
+  padding: 2rem 0;
+}
