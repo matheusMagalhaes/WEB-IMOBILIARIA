@@ -90,3 +90,8 @@ Legend {
 .delete-icon {
   color: #dc4242;
 }
+
+footer {
+  width: 100%;
+  background: rgba(116, 133, 142);
+}
