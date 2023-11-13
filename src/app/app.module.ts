@@ -26,9 +26,16 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FooterComponent } from './components/footer/footer.component';
 import { CaroulselComponent } from './components/caroulsel/caroulsel.component';
 
-
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe, SearchFormComponent, FooterComponent, CaroulselComponent],
+  declarations: [
+    AppComponent,
+    HeaderNavComponent,
+    HomeComponent,
+    RealPipe,
+    SearchFormComponent,
+    FooterComponent,
+    CaroulselComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -50,7 +57,7 @@ import { CaroulselComponent } from './components/caroulsel/caroulsel.component';
     MatMenuModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
