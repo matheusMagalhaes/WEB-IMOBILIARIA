@@ -24,10 +24,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { SearchFormComponent } from './components/Forms/search-form/search-form.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FooterComponent } from './components/footer/footer.component';
+import { CaroulselComponent } from './components/caroulsel/caroulsel.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe, SearchFormComponent, FooterComponent],
+  declarations: [AppComponent, HeaderNavComponent, HomeComponent, RealPipe, SearchFormComponent, FooterComponent, CaroulselComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
